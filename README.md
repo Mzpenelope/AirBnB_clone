@@ -1,19 +1,37 @@
-# AirBnB Clone
+# AirBnB Clone Project
 
-**Description of the Project:**
+![AirBnB Logo](https://www.pngitem.com/pimgs/m/132-1322125_transparent-background-airbnb-logo-hd-png-download.png)
 
-The AirBnB Clone project is a simplified, text-based version of the popular Airbnb platform. It is designed to simulate the basic functionality of Airbnb, allowing users to create, manage, and book property listings. This project is intended for educational purposes and provides a Command Line Interface (CLI) for interaction.
+## Project Description
 
-**Description of the Command Interpreter:**
+Welcome to the AirBnB Clone Project! This project is the backend portion of our AirBnB clone, complete with a console application powered by Python's `cmd` module. We've designed this application to emulate the functionality of Airbnb, allowing users to interact with a simplified version of the platform through the command line.
 
-The Command Interpreter is a crucial component of the AirBnB Clone project. It acts as the main interface between the user and the system, enabling users to perform various operations, such as creating properties, searching for properties, booking stays, and managing user accounts.
+Data in the form of Python objects is generated and stored in JSON files, accessible via Python's `json` module.
 
-**How to Start It:**
+## Command Interpreter
 
-1. Clone the repository:
+Our command interpreter replicates the experience of using a Bash shell with a defined set of commands tailored for the AirBnB website's purposes. This interactive interface serves as the frontend for the web app, leveraging Python's object-oriented programming for backend functionality.
+
+Some available commands include:
+
+- `show`: Display information about an object.
+- `create`: Create new objects (e.g., User, Place).
+- `update`: Modify object attributes.
+- `destroy`: Delete an object.
+- `count`: Retrieve the number of instances of a class.
+
+These commands allow you to interact with objects, retrieve information, and perform essential operations.
+
+## Getting Started
+
+To run the AirBnB Clone Project on your local Linux machine for development and testing, follow these steps:
+
+### Installation
+
+1. Clone the project repository from GitHub:
 
    ```
-   git clone https://github.com/yourusername/AirBnB_clone.git
+git clone https://github.com/Mzpenelope/AirBnB_clone.git
    ```
 
 2. Navigate to the project directory:
@@ -22,83 +40,55 @@ The Command Interpreter is a crucial component of the AirBnB Clone project. It a
    cd AirBnB_clone
    ```
 
-3. Start the command interpreter:
+### Usage
 
-   ```
-   ./console.py
-   ```
+You can use the command interpreter in two modes: Interactive and Non-interactive.
 
-**How to Use It:**
+#### Interactive Mode
 
-Once the command interpreter is running, you can use a variety of commands to interact with the AirBnB Clone system. Here are some of the available commands:
+In this mode, the console displays the `(hbnb)` prompt, waiting for your input and providing immediate feedback.
 
-- `create`: Create a new instance of a property or user account.
-  ```
-  create User
-  ```
+```bash
+$ ./console.py
+(hbnb) help
+...
+(hbnb) quit
+...
+```
 
-- `show`: Display detailed information about a specific property or user.
-  ```
-  show User 12345
-  ```
+#### Non-interactive Mode
 
-- `all`: List all available properties or users.
-  ```
-  all User
-  ```
+In this mode, you pipe commands into the console for execution without the need for interactive input.
 
-- `update`: Update the information of a property or user.
-  ```
-  update User 12345 name "John Doe"
-  ```
+```bash
+$ echo "help" | ./console.py
+...
+```
 
-- `destroy`: Delete a property or user from the system.
-  ```
-  destroy Property 54321
-  ```
+#### Command Input Format
 
-- `search`: Search for properties based on specific criteria.
-  ```
-  search Property city "San Francisco"
-  ```
+Commands and arguments should be separated by spaces. For example:
 
-- `book`: Book a stay at a specific property.
-  ```
-  book Property 12345 2023-10-15 2023-10-20
-  ```
+```bash
+(hbnb) create BaseModel
+...
+```
 
-- `quit` or `EOF`: Exit the command interpreter.
+### Available Commands
 
-**Examples:**
+Here are some of the commands you can use with the command interpreter:
 
-1. Creating a new user:
-   ```
-   create User
-   ```
+- `quit` or `EOF`: Exit the program.
+- `help`: Display instructions on how to use a command.
+- `create`: Create a new instance of a class and save it to the JSON file.
+- `show`: Display information about an instance based on class name and ID.
+- `destroy`: Delete an instance based on class name and ID.
+- `all`: Print string representations of all instances or by class name.
+- `update`: Update instance attributes.
+- `count`: Retrieve the number of instances of a class.
 
-2. Listing all properties:
-   ```
-   all Property
-   ```
+## Author
 
-3. Updating a user's information:
-   ```
-   update User 12345 name "Alice Smith"
-   ```
+This project is maintained by Phillipa and Christabel.
 
-4. Booking a stay at a property:
-   ```
-   book Property 54321 2023-09-20 2023-09-25
-   ```
-
-5. Searching for properties in a specific city:
-   ```
-   search Property city "New York"
-   ```
-
-6. Quitting the command interpreter:
-   ```
-   quit
-   ```
-
-Feel free to explore the various commands and functionalities of the AirBnB Clone project using the command interpreter. Enjoy your virtual Airbnb experience!
+Feel free to explore the AirBnB Clone Project's functionality and experiment with the command interpreter to create, manage, and interact with property listings. Enjoy your virtual Airbnb experience!
